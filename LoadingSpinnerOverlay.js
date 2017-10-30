@@ -175,8 +175,9 @@ class LoadingSpinnerOverlay extends Component {
             this._loadingSpinnerHideAnimation = null
             this.setState({
                 visible: false,
+            }, () => {
+                animationEnd && animationEnd()
             })
-            animationEnd && animationEnd()
         })
     }
 
